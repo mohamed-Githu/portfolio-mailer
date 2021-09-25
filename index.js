@@ -17,7 +17,7 @@ app.post("/api/send-email", (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL,
     to: process.env.EMAIL,
     subject: name,
     text: `${message} \n\nFrom: ${email}`,
